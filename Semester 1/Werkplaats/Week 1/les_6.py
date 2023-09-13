@@ -1,186 +1,186 @@
 # Rekenmachine
 
-# def add(first_number, second_number):
-#     print(first_number + second_number)
-#
-# def subtract(first_number, second_number):
-#     print(first_number - second_number)
-#
-# def multiply(first_number, second_number):
-#     print(first_number * second_number)
-#
-# def divide(first_number, second_number):
-#     print(first_number / second_number)
-#
-# def calculate(first_number, second_number, operator):
-#     if operator == '+':
-#         add(first_number, second_number)
-#     elif operator == '-':
-#         subtract(first_number, second_number)
-#     elif operator == '*':
-#         multiply(first_number, second_number)
-#     elif operator == '/':
-#         divide(first_number, second_number)
-#     else:
-#         print('Abort, unknown input.')
-#
-# input_one = input('Geef het eerste getal: ')
-# input_two = input('Geef het tweede getal: ')
-# operator = input('Geef de operator (+, -, * of /): ')
-# calculate(int(input_one), int(input_two), operator)
-#
+def add(first_number, second_number):
+    print(first_number + second_number)
+
+def subtract(first_number, second_number):
+    print(first_number - second_number)
+
+def multiply(first_number, second_number):
+    print(first_number * second_number)
+
+def divide(first_number, second_number):
+    print(first_number / second_number)
+
+def calculate(first_number, second_number, operator):
+    if operator == '+':
+        add(first_number, second_number)
+    elif operator == '-':
+        subtract(first_number, second_number)
+    elif operator == '*':
+        multiply(first_number, second_number)
+    elif operator == '/':
+        divide(first_number, second_number)
+    else:
+        print('Abort, unknown input.')
+
+input_one = input('Geef het eerste getal: ')
+input_two = input('Geef het tweede getal: ')
+operator = input('Geef de operator (+, -, * of /): ')
+calculate(int(input_one), int(input_two), operator)
+
 # # Debug Rekenmachine
-#
-# def debug_print(first_number, second_number, operator_type):
-#     if first_number == 0:
-#         print('Debug: first_number is 0')
-#     if second_number == 0:
-#         print('Debug: second_number is 0')
-#     print(f"Debug: {first_number} {operator_type} {second_number}")
-#
-# def add(first_number, second_number, debug=False):
-#     if debug:
-#         debug_print(first_number, second_number, '+')
-#     print(first_number + second_number)
-#
-# def subtract(first_number, second_number, debug=False):
-#     if debug:
-#         debug_print(first_number, second_number, '-')
-#     print(first_number - second_number)
-#
-# def multiply(first_number, second_number, debug=False):
-#     if debug:
-#         debug_print(first_number, second_number, '*')
-#     print(first_number * second_number)
-#
-# def divide(first_number, second_number, debug=False):
-#     if debug:
-#         debug_print(first_number, second_number, '/')
-#     print(first_number / second_number)
-#
-# def calculate(first_number, second_number, operator_type, debuginput):
-#     if debuginput == 'Yes':
-#         debug = True
-#     else:
-#         debug = False
-#
-#     if operator_type == '+':
-#         add(first_number, second_number, debug)
-#     elif operator_type == '-':
-#         subtract(first_number, second_number, debug)
-#     elif operator_type == '*':
-#         multiply(first_number, second_number, debug)
-#     elif operator_type == '/':
-#         divide(first_number, second_number, debug)
-#     else:
-#         print('Abort, unknown input.')
-#
-# input_one = input('Geef het eerste getal: ')
-# input_two = input('Geef het tweede getal: ')
-# input_debug = input('Debug? [Yes/No]: ')
-# operator = input('Geef de operator (+, -, * of /): ')
-# calculate(int(input_one), int(input_two), operator, input_debug)
+
+def debug_print(first_number, second_number, operator_type):
+    if first_number == 0:
+        print('Debug: first_number is 0')
+    if second_number == 0:
+        print('Debug: second_number is 0')
+    print(f"Debug: {first_number} {operator_type} {second_number}")
+
+def add(first_number, second_number, debug=False):
+    if debug:
+        debug_print(first_number, second_number, '+')
+    print(first_number + second_number)
+
+def subtract(first_number, second_number, debug=False):
+    if debug:
+        debug_print(first_number, second_number, '-')
+    print(first_number - second_number)
+
+def multiply(first_number, second_number, debug=False):
+    if debug:
+        debug_print(first_number, second_number, '*')
+    print(first_number * second_number)
+
+def divide(first_number, second_number, debug=False):
+    if debug:
+        debug_print(first_number, second_number, '/')
+    print(first_number / second_number)
+
+def calculate(first_number, second_number, operator_type, debuginput):
+    if debuginput == 'Yes':
+        debug = True
+    else:
+        debug = False
+
+    if operator_type == '+':
+        add(first_number, second_number, debug)
+    elif operator_type == '-':
+        subtract(first_number, second_number, debug)
+    elif operator_type == '*':
+        multiply(first_number, second_number, debug)
+    elif operator_type == '/':
+        divide(first_number, second_number, debug)
+    else:
+        print('Abort, unknown input.')
+
+input_one = input('Geef het eerste getal: ')
+input_two = input('Geef het tweede getal: ')
+input_debug = input('Debug? [Yes/No]: ')
+operator = input('Geef de operator (+, -, * of /): ')
+calculate(int(input_one), int(input_two), operator, input_debug)
 
 # Verbeterde McDonald's
 
-# import sys
-# aborted = False
-#
-# def eat_or_takeaway():
-#     eat_in = False
-#     answer_eating_location = input('Hier opeten of meenemen? [Hier opeten/Meenemen]: ')
-#     uppercase_answer_eating_location = answer_eating_location.upper()
-#     if uppercase_answer_eating_location == 'HIER OPETEN':
-#         print('Hier opeten')
-#         eat_in = True
-#     elif uppercase_answer_eating_location == 'MEENEMEN':
-#         print('Meenemen')
-#         eat_in = False
-#     else:
-#         sys.exit('Helaas, dit ging niet helemaal goed. Probeer het opnieuw.')
-#
-#     return eat_in
-#
-# def burgers_or_drinks():
-#     answer_burgers_drinks = input('Burgers of drankjes? [Burgers/Drankjes]: ')
-#     uppercase_answer_burgers_drinks = answer_burgers_drinks.upper()
-#     if uppercase_answer_burgers_drinks == 'BURGERS':
-#         burgers()
-#     elif uppercase_answer_burgers_drinks == 'DRANKJES':
-#         drinks()
-#     else:
-#         sys.exit('Helaas, dit ging niet helemaal goed. Probeer het opnieuw.')
-#
-# def burgers():
-#     print('Burgers')
-#     answer_burgers = input('Burgers [Hamburger, Cheeseburger, Bic Mac, Quarter Pounder]: ')
-#     uppercase_answer_burgers = answer_burgers.upper()
-#     if uppercase_answer_burgers == 'HAMBURGER':
-#         print('Hamburger')
-#     elif uppercase_answer_burgers == 'CHEESEBURGER':
-#         print('Cheeseburger')
-#     elif uppercase_answer_burgers == 'BIC MAC':
-#         print('Big Mac')
-#     elif uppercase_answer_burgers == 'QUARTER POUNDER':
-#         print('Quarter Pounder')
-#     else:
-#         sys.exit('Helaas, dit ging niet helemaal goed. Probeer het opnieuw.')
-#
-# def drinks():
-#     answer_cold_warm_drinks = input('Warme of koude dranken? [Warm/Koud]: ')
-#     uppercase_answer_cold_warm_drinks = answer_cold_warm_drinks.upper()
-#     if uppercase_answer_cold_warm_drinks == 'WARM':
-#         hot_drinks()
-#     elif uppercase_answer_cold_warm_drinks == 'KOUD':
-#         cold_drinks()
-#     else:
-#         sys.exit('Helaas, dit ging niet helemaal goed. Probeer het opnieuw.')
-#
-# def hot_drinks():
-#     print('Warme drankjes')
-#     answer_warm_drinks = input('Koffie, Cappucino, Chocolademelk? [Koffie/Cappucino/Chocolademelk]: ')
-#     uppercase_answer_warm_drinks = answer_warm_drinks.upper()
-#     if uppercase_answer_warm_drinks == 'KOFFIE':
-#         print('Koffie')
-#     elif uppercase_answer_warm_drinks == 'CAPPUCINO':
-#         print('Cappucino')
-#     elif uppercase_answer_warm_drinks == 'CHOCOLADEMELK':
-#         print('Chocolademelk')
-#     else:
-#         sys.exit('Helaas, dit ging niet helemaal goed. Probeer het opnieuw.')
-#
-# def cold_drinks():
-#     print('Koude drankjes')
-#     answer_cold_drinks = input('Coca Cola, Cola Zero, 7-up, Fanta, Fristi? [Coca Cola/Cola Zero/7-up/Fanta/Fristi]: ')
-#     uppercase_answer_cold_drinks = answer_cold_drinks.upper()
-#     if answer_cold_drinks == 'COCA COLA':
-#         print('Coca Cola')
-#     elif answer_cold_drinks == 'COLA ZERO':
-#         print('Cola Zero')
-#     elif answer_cold_drinks == '7-UP':
-#         print('7-up')
-#     elif answer_cold_drinks == 'FANTA':
-#         print('Fanta')
-#     elif answer_cold_drinks == 'FRISTI':
-#         print('Fristi')
-#     else:
-#         sys.exit('Helaas, dit ging niet helemaal goed. Probeer het opnieuw.')
-#
-# def order_completed(eat_in):
-#     if eat_in == True:
-#         print('Bedankt voor uw bestelling en eet smakelijk in ons restaurant.')
-#     elif eat_in == False:
-#         print('Bedankt voor uw bestelling, goede reis en eet smakelijk.')
-#     else:
-#         sys.exit('Helaas, dit ging niet helemaal goed. Probeer het opnieuw.')
-#
-# print("Mc Donald's")
-#
-# eat_in=eat_or_takeaway()
-#
-# burgers_or_drinks()
-#
-# order_completed(eat_in)
+import sys
+aborted = False
+
+def eat_or_takeaway():
+    eat_in = False
+    answer_eating_location = input('Hier opeten of meenemen? [Hier opeten/Meenemen]: ')
+    uppercase_answer_eating_location = answer_eating_location.upper()
+    if uppercase_answer_eating_location == 'HIER OPETEN':
+        print('Hier opeten')
+        eat_in = True
+    elif uppercase_answer_eating_location == 'MEENEMEN':
+        print('Meenemen')
+        eat_in = False
+    else:
+        sys.exit('Helaas, dit ging niet helemaal goed. Probeer het opnieuw.')
+
+    return eat_in
+
+def burgers_or_drinks():
+    answer_burgers_drinks = input('Burgers of drankjes? [Burgers/Drankjes]: ')
+    uppercase_answer_burgers_drinks = answer_burgers_drinks.upper()
+    if uppercase_answer_burgers_drinks == 'BURGERS':
+        burgers()
+    elif uppercase_answer_burgers_drinks == 'DRANKJES':
+        drinks()
+    else:
+        sys.exit('Helaas, dit ging niet helemaal goed. Probeer het opnieuw.')
+
+def burgers():
+    print('Burgers')
+    answer_burgers = input('Burgers [Hamburger, Cheeseburger, Bic Mac, Quarter Pounder]: ')
+    uppercase_answer_burgers = answer_burgers.upper()
+    if uppercase_answer_burgers == 'HAMBURGER':
+        print('Hamburger')
+    elif uppercase_answer_burgers == 'CHEESEBURGER':
+        print('Cheeseburger')
+    elif uppercase_answer_burgers == 'BIC MAC':
+        print('Big Mac')
+    elif uppercase_answer_burgers == 'QUARTER POUNDER':
+        print('Quarter Pounder')
+    else:
+        sys.exit('Helaas, dit ging niet helemaal goed. Probeer het opnieuw.')
+
+def drinks():
+    answer_cold_warm_drinks = input('Warme of koude dranken? [Warm/Koud]: ')
+    uppercase_answer_cold_warm_drinks = answer_cold_warm_drinks.upper()
+    if uppercase_answer_cold_warm_drinks == 'WARM':
+        hot_drinks()
+    elif uppercase_answer_cold_warm_drinks == 'KOUD':
+        cold_drinks()
+    else:
+        sys.exit('Helaas, dit ging niet helemaal goed. Probeer het opnieuw.')
+
+def hot_drinks():
+    print('Warme drankjes')
+    answer_warm_drinks = input('Koffie, Cappucino, Chocolademelk? [Koffie/Cappucino/Chocolademelk]: ')
+    uppercase_answer_warm_drinks = answer_warm_drinks.upper()
+    if uppercase_answer_warm_drinks == 'KOFFIE':
+        print('Koffie')
+    elif uppercase_answer_warm_drinks == 'CAPPUCINO':
+        print('Cappucino')
+    elif uppercase_answer_warm_drinks == 'CHOCOLADEMELK':
+        print('Chocolademelk')
+    else:
+        sys.exit('Helaas, dit ging niet helemaal goed. Probeer het opnieuw.')
+
+def cold_drinks():
+    print('Koude drankjes')
+    answer_cold_drinks = input('Coca Cola, Cola Zero, 7-up, Fanta, Fristi? [Coca Cola/Cola Zero/7-up/Fanta/Fristi]: ')
+    uppercase_answer_cold_drinks = answer_cold_drinks.upper()
+    if answer_cold_drinks == 'COCA COLA':
+        print('Coca Cola')
+    elif answer_cold_drinks == 'COLA ZERO':
+        print('Cola Zero')
+    elif answer_cold_drinks == '7-UP':
+        print('7-up')
+    elif answer_cold_drinks == 'FANTA':
+        print('Fanta')
+    elif answer_cold_drinks == 'FRISTI':
+        print('Fristi')
+    else:
+        sys.exit('Helaas, dit ging niet helemaal goed. Probeer het opnieuw.')
+
+def order_completed(eat_in):
+    if eat_in == True:
+        print('Bedankt voor uw bestelling en eet smakelijk in ons restaurant.')
+    elif eat_in == False:
+        print('Bedankt voor uw bestelling, goede reis en eet smakelijk.')
+    else:
+        sys.exit('Helaas, dit ging niet helemaal goed. Probeer het opnieuw.')
+
+print("Mc Donald's")
+
+eat_in=eat_or_takeaway()
+
+burgers_or_drinks()
+
+order_completed(eat_in)
 
 # Studenten rapport
 
